@@ -1,0 +1,77 @@
+{% extends 'pludg/base_template.html' %}
+
+{% block stylessheets %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pludg/home.css' %}" />
+{% endblock %}
+
+{% block main_content %}
+
+<div id="about_wrapper">
+    <img src="#" alt="Opener Image">
+    <h2>
+        Über
+    </h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
+        Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
+        in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
+        felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aenean nisl nisi, placerat ut arcu lacinia, rhoncus consectetur lorem. Donec laoreet rhoncus neque, sit
+        amet bibendum elit finibus at. cass aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Cras ultricies lorem pharetra erat pretium tempus. Vestibulum dolor lorem, sagittis
+        vestibulum felis a, tincidunt consectetur lacus. Praesent sem libero, consequat imperdiet dui eu,
+        hendrerit pretium tellus.
+    </p>
+</div>
+
+
+<div id="references_wrapper container">
+    <div class="row">
+        <div class="article_wrapper col-sm">
+            <h2>
+                article 1
+            </h2>
+            {% load static %} <!-- check load static if nec  -->
+            <img src="{% static 'pludg/images/fh_logo.jpg' %}" width="100px">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
+                Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
+                in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
+                felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+        <div class="article_wrapper col-sm">
+            <h2>
+                article 2
+            </h2>
+            {% load static %} <!-- check load static if nec  -->
+            <img src="{% static 'pludg/images/fh_logo.jpg' %}" width="100px">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
+                Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
+                in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
+                felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+        <div class="article_wrapper col-sm">
+            <h2>
+                article 3
+            </h2>
+            {% load static %} <!-- check load static if nec  -->
+            <img src="{% static 'pludg/images/fh_logo.jpg' %}" width="100px">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
+                Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
+                in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
+                felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="projects_wrapper">
+
+</div>
+
+{% endblock %}
