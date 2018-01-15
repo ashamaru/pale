@@ -5,67 +5,72 @@
 <link rel="stylesheet" type="text/css" href="{% static 'pludg/home.css' %}" />
 {% endblock %}
 
+
+{% block header %}
+    <h1>Home</h1>
+{% endblock %}
+
+
 {% block main_content %}
 
-<div id="about_wrapper">
-    <img src="#" alt="Opener Image">
-    <h2>
-        Über
-    </h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
-        Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
-        in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
-        felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Aenean nisl nisi, placerat ut arcu lacinia, rhoncus consectetur lorem. Donec laoreet rhoncus neque, sit
-        amet bibendum elit finibus at. cass aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Cras ultricies lorem pharetra erat pretium tempus. Vestibulum dolor lorem, sagittis
-        vestibulum felis a, tincidunt consectetur lacus. Praesent sem libero, consequat imperdiet dui eu,
-        hendrerit pretium tellus.
-    </p>
+<div id="about_wrapper" class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h2 class="display-4">
+            Über
+        </h2>
+        <p class="lead">
+            Als Unternehmen zeichen wir uns aus, durch unmenschliche Arbeitsverhältnisse, einer Unternehmensgeschichte von 12 Tagen, schlechte Bezahlung, 2 Tage Urlaub im Jahr. Lernen sie uns kennen ...
+        </p>
+    </div>
 </div>
 
 
-<div id="references_wrapper container">
+<div id="references_wrapper">
     <div class="row">
-        <div class="article_wrapper col-sm">
-            <h2>
-                article 1
-            </h2>
-            {% load static %} <!-- check load static if nec  -->
-            <img src="{% static 'pludg/images/fh_logo.jpg' %}" width="100px">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
-                Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
-                in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
-                felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+        <div class="article-wrapper col-sm border rounded">
+            <div class="reference">
+                <h2>
+                    Inneneinrichtung
+                </h2>
+                {% load static %} <!-- check load static if nec  -->
+                <img src="{% static 'pludg/pale_pics_examples/pale_example_0.jpg' %}" width="300">
+                <p>
+                    Das 'schnöde Inneneinrichtugn' Bauprojekt war von besonderer Bedeutung für uns. Als erstes Projekt seiner Art wurde unser Unternehmen mit unzähligen Anforderungen konfrontiert. Mit Begeisterung stellten wir uns dieser Aufgabe und .. erledigten sie. Unsere Bemühungen waren nicht umsonst blabla.
+                </p>
+                <a href="#">Erfahren sie mehr</a>
+            </div>
         </div>
-        <div class="article_wrapper col-sm">
-            <h2>
-                article 2
-            </h2>
-            {% load static %} <!-- check load static if nec  -->
-            <img src="{% static 'pludg/images/fh_logo.jpg' %}" width="100px">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
-                Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
-                in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
-                felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+        <div class="article-wrapper col-sm border rounded">
+            <div class="reference">
+                <h2>
+                    Privatanlagen
+                </h2>
+                {% load static %} <!-- check load static if nec  -->
+                <img src="{% static 'pludg/pale_pics_examples/pale_example_1.jpg' %}" width="300">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
+                    Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
+                    in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
+                    felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#">Erfahren sie mehr</a>
+            </div>
         </div>
-        <div class="article_wrapper col-sm">
-            <h2>
-                article 3
-            </h2>
-            {% load static %} <!-- check load static if nec  -->
-            <img src="{% static 'pludg/images/fh_logo.jpg' %}" width="100px">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
-                Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
-                in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
-                felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+        <div class="article-wrapper col-sm border rounded">
+            <div class="reference">
+                <h2>
+                    Die fetten Teile
+                </h2>
+                {% load static %} <!-- check load static if nec  -->
+                <img src="{% static 'pludg/pale_pics_examples/pale_example_2.jpg' %}" width="300">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
+                    Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
+                    in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
+                    felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#">Erfahren sie mehr</a>
+            </div>
         </div>
     </div>
 </div>
