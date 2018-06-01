@@ -1,82 +1,199 @@
 {% extends 'pludg/base_template.html' %}
 
-{% block stylessheets %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'pludg/home.css' %}" />
+
+{% block stylessheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'pludg/css/home.css' %}" />
 {% endblock %}
 
 
 {% block header %}
-    <h1>Home</h1>
+
 {% endblock %}
 
+{% block site_nav %}
+<div id="site_nav_wrapper" class="site-nav-wrapper">
+    <ul class="site-nav">
+        <li class="site-nav-item">
+            <a href="#references">
+                <img src="{% static 'pludg/icons/apartments.png' %}" width="40" />
+            </a>
+        </li>
+        <br>
+        <li class="site-nav-item">
+            <a href="#contact">
+                <img src="{% static 'pludg/icons/email.png' %}" width="40" />
+            </a>
+        </li>
+        <br>
+        <li class="site-nav-item">
+            <a href="#news">
+                <img src="{% static 'pludg/icons/tv.png' %}" width="40" />
+            </a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
 
-{% block main_content %}
+{% block site_intro %}
 
-<div id="about_wrapper" class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h2 class="display-4">
-            Über
-        </h2>
-        <p class="lead">
-            Als Unternehmen zeichen wir uns aus, durch unmenschliche Arbeitsverhältnisse, einer Unternehmensgeschichte von 12 Tagen, schlechte Bezahlung, 2 Tage Urlaub im Jahr. Lernen sie uns kennen ...
+<div id="about_wrapper" class="about">
+    <div class="container about-container bg-light">
+        <div class="about-headline-container">
+            <h2 class="about-headline font-pale">
+                Unternehmen - hayir
+            </h2>
+        </div>
+        <p class="about-description">
+             Aufgrund der verkehrsgünstigen Lage und Anbindung sowie der rundum vorhandenen
+            Betriebsansiedlungen hat dieser Standort ein hohes Entwicklungspotenzial - besonders für
+            aufstrebende Unternehmen ein unbedingter Vorteil. Für Unternehmen, die eine zentrale Lage
+            und eine optimale Infrastruktur mit allen Vorteilen der Wachstumsregion Bayern verbinden
+            wollen, ist das Dienstleistungs- & Medienzentrum PRINZ LUDWIG HÖFE in Regensburg eine
+            hochwertige Ansiedlungsmöglichkeit.
         </p>
     </div>
 </div>
 
+{% endblock %}
 
-<div id="references_wrapper">
-    <div class="row">
-        <div class="article-wrapper col-sm border rounded">
-            <div class="reference">
-                <h2>
-                    Inneneinrichtung
-                </h2>
-                {% load static %} <!-- check load static if nec  -->
-                <img src="{% static 'pludg/pale_pics_examples/pale_example_0.jpg' %}" width="300">
-                <p>
-                    Das 'schnöde Inneneinrichtugn' Bauprojekt war von besonderer Bedeutung für uns. Als erstes Projekt seiner Art wurde unser Unternehmen mit unzähligen Anforderungen konfrontiert. Mit Begeisterung stellten wir uns dieser Aufgabe und .. erledigten sie. Unsere Bemühungen waren nicht umsonst blabla.
-                </p>
-                <a href="#">Erfahren sie mehr</a>
+{% block main_content %}
+
+<div class="container my-4">
+
+    <div id="references" class="row ref-anch">
+        <div class="col-sm m-3">
+            <h2 style="text-align: center;">
+                Referenzen
+            </h2>
+            <hr>
+        </div>
+    </div>
+    <div id="references_wrapper" class="row">
+        <div class="article-wrapper col-sm">
+            <div class="reference border rounded bg-light-darker">
+                <img src="{% static 'pludg/images/plh.jpg' %}" width="100%" height="210">
+                <div class="reference-info p-3">
+                    <h3 class="font-pale">
+                        Dienstleistungs- & Medienzentrum
+                    </h3>
+                    <p>
+                        Aufgrund der verkehrsgünstigen Lage und Anbindung sowie der rundum vorhandenen
+                        Betriebsansiedlungen hat dieser Standort ein hohes Entwicklungspotenzial - besonders für
+                        aufstrebende Unternehmen ein unbedingter Vorteil. Für Unternehmen, die eine zentrale Lage
+                        und eine optimale Infrastruktur mit allen Vorteilen der Wachstumsregion Bayern verbinden
+                        wollen, ist das Dienstleistungs- & Medienzentrum PRINZ LUDWIG HÖFE in Regensburg eine
+                        hochwertige Ansiedlungsmöglichkeit.
+                    </p>
+                    <a href="#">Erfahren sie mehr</a>
+                </div>
             </div>
         </div>
-        <div class="article-wrapper col-sm border rounded">
-            <div class="reference">
-                <h2>
-                    Privatanlagen
-                </h2>
-                {% load static %} <!-- check load static if nec  -->
-                <img src="{% static 'pludg/pale_pics_examples/pale_example_1.jpg' %}" width="300">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
-                    Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
-                    in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
-                    felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <a href="#">Erfahren sie mehr</a>
+        <div class="article-wrapper col-sm">
+            <div class="reference border rounded bg-light-darker">
+                <img src="{% static 'pludg/pale_pics_examples/pale_example_1.jpg' %}" width="100%" height="210">
+                <div class="reference-info p-3">
+                    <h3 class="font-pale">
+                        Privatanlagen
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
+                        Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
+                        in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
+                        felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <a href="#">Erfahren sie mehr</a>
+                </div>
             </div>
         </div>
-        <div class="article-wrapper col-sm border rounded">
-            <div class="reference">
-                <h2>
-                    Die fetten Teile
-                </h2>
-                {% load static %} <!-- check load static if nec  -->
-                <img src="{% static 'pludg/pale_pics_examples/pale_example_2.jpg' %}" width="300">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
-                    Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
-                    in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet
-                    felis aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <a href="#">Erfahren sie mehr</a>
+        <div class="article-wrapper col-sm">
+            <div class="reference border rounded bg-light-darker">
+                <img src="{% static 'pludg/images/kreutzers_logo.jpg' %}" width="100%" height="210">
+                <div class="reference-info p-3">
+                    <h3 class="font-pale">
+                        Kreutzer's Restaurant
+                    </h3>
+                    <p>
+                        In der vor dem Abriss bewahrten, historischen Remise der ehem. Hafenzollvilla findet sich seit
+                        April 2011 das Restaurant Kreutzer's. Das Kreutzr's verwöhnt seine Gäste mit ausgesuchten Speisen
+                        für jede Tageszeit, für jeden Geschmack und jede Lebenslage. Ob Geschäftsabschluss, Familienfeier
+                        oder Hochzeit - in Kreutzer's Restaurant in den Prinz-Ludwig-Höfen lässt es sich wunderbar feiern.
+                    </p>
+                    <a href="#">Erfahren sie mehr</a>
+                </div>
             </div>
         </div>
     </div>
+
+    <div id="contact" class="row ref-anch">
+        <div class="col-sm m-3">
+            <h2 style="text-align: center;">
+                Kontaktieren sie uns
+            </h2>
+            <hr>
+        </div>
+    </div>
+
+    <div id="contact_wrapper" class="row">
+        <div class="col-sm border rounded m-3 bg-light-darker">
+            <div class="contact-card row">
+                <div class="contact-card-info col-sm p-2" style="height: 400px;">
+                    <p>
+                        Wir haben ihr Interesse geweckt?
+                        Kontaktieren sie uns einach über Mail. Wir nehmen ihre Anfragen gerne entgegen
+                        und kontaktieren sie in kürze.
+                    </p>
+                    <a href="./contact/">Kontakt</a>
+                </div>
+                <div class="contact-card-img col-sm p-0">
+                    <img class="m-0" src="{% static 'pludg/images/kreutzers_logo.jpg' %}" width="100%" height="210" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div id="news" class="row ref-anch">
+        <div class="col-sm m-3">
+            <h2 style="text-align: center;">
+                News
+            </h2>
+            <hr>
+        </div>
+    </div>
+    <div id="news_wrapper" class="row">
+        <div class="news col-sm border-rounded m-3 bg-light-darker">
+            <ul>
+                {% for article in news %}
+                <li>
+                    <h4> {{ article.headline }}</h4>
+                    <span>{{ article.date }}</span>
+                    <p>{{ article.short_desc }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    -->
+    <!--
+    <div id="news_wrapper" class="row">
+        <div class="news col-sm border-rounded m-0 bg-light-darker">
+            <ul>
+                {% for article in news %}
+                <li>
+                    <h4> {{ article.headline }}</h4>
+                    <span>{{ article.date }}</span>
+                    <p>{{ article.short_desc }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    -->
 </div>
 
-<div id="projects_wrapper">
-
-</div>
+<!-- icon attributions -->
+<div class="invisible">Icons made by<a href="http://www.freepik.com" title="Freepik">Freepik</a>from<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>is licensed by<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<div class="invisible">Icons made by <a href="https://www.flaticon.com/authors/roundicons-freebies" title="Roundicons Freebies">Roundicons Freebies</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<div class="invisible">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 {% endblock %}

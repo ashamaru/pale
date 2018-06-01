@@ -1,0 +1,75 @@
+{% extends 'pludg/base_template.html' %}
+
+{% block stylessheets %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pludg/css/news.css' %}" />
+{% endblock %}
+
+{% block header %}
+    <div class="intro" style="height: 400px;">
+        <!--<div class="intro-headline-backface"/>
+        <h1 class="intro-headline">Home</h1>-->
+    <div class="window" height="400px"></div>
+    </div>
+{% endblock %}
+
+
+{% block site_intro %}
+<div id="about_wrapper" class="about">
+    <div class="container about-container bg-light">
+        <div class="about-headline-container">
+            <h2 class="about-headline font-pale">
+                Kontakt und Anfahrt
+            </h2>
+            <hr>
+        </div>
+        <p class="about-description">
+             Wir haben ihr Interesse geweckt?
+            Kontaktieren sie uns einach über Mail. Wir nehmen ihre Anfragen gerne entgegen
+            und kontaktieren sie in kürze.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block main_content %}
+
+<div class="container">
+   <div id="news" class="row ref-anch">
+        <div class="col-sm m-3">
+            <h2 style="text-align: center;">
+                News
+            </h2>
+            <hr>
+        </div>
+    </div>
+    <div id="news_wrapper" class="row">
+        <div class="news col-sm border-rounded m-3 bg-light-darker">
+            <ul>
+                {% for article in news %}
+                <li style="clear: both;">
+                    <div class="d-inline-block" style="width: 10%;">
+                        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample{{ forloop.counter }}" aria-expanded="false" aria-controls="collapseExample">
+                            +
+                        </button>
+                    </div>
+                    <div class="d-inline-block" style="float: right; width: 90%;">
+                        <h4> {{ article.headline }}</h4>
+                        <span>{{ article.date }}</span>
+                        <p>{{ article.short_desc }}</p>
+                        <div class="collapse" id="collapseExample{{ forloop.counter }}">
+                            <div class="">
+                                {{ article.content }}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% empty %}
+                Es sind keine News vorhanden.
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

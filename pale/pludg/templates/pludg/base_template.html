@@ -1,3 +1,6 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,216 +15,139 @@
     <!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     -->
-    
-    {% load static %}
+
     <link rel="stylesheet" type="text/css" href="{% static 'pludg/bootstrap/bootstrap.css' %}" />
-    
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'pludg/base_styles.css' %}" />
-    
+    <link rel="stylesheet" type="text/css" href="{% static 'pludg/css/basestyles.css' %}" />
+
+    <!-- Core CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'pludg/node_modules/photoswipe/dist/photoswipe.css' %}" />
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+        - .png and .svg icons sprite,
+        - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="{% static 'pludg/node_modules/photoswipe/dist/default-skin/default-skin.css' %}">
     {% block stylessheets %}
     {% endblock %}
+
+    {% block preloads %}
+    {% endblock %}
+    
     
 </head>
 <body class="bg-light">
+
+
+<header id="m_header" class="container bg-light font-pludg-dark content-header"> <!-- removed class fixed-navbar-downpush from original -->
+    <h1>Fritz Hildebrand - Gewerbeimmobilien</h1>
+    <p>
+        Ihr Ansprechpartner für Kompetenez und Werte in Immobilien :3
+    </p>
+</header>
+
+
     {% block navigation %}
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-        <div class="container-fluid">
+<div class="nav-wrapper navbar-sticky">
+    <nav class="navbar navbar-expand-md navbar-light bg-light "> <!-- fixed-top class for original design -->
+        <div class="container">
             <a class="navbar-brand" href=".">
                 <div class="icon-wrapper">
-                    {% load static %} <!-- check load static if nec  -->
                     <img src="{% static 'pludg/images/fh_logo.jpg' %}" width="10" height="10">
                 </div>
                 pludg
             </a>
+            <div class="navbar-details">
+                <p>
+                    Gewerbeimmobilien - Fritz Hildebrand
+                </p>
+            </div>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href=".">Home</a>
+                        <a class="nav-link" href="/pludg/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projects">Projekte</a>
+                        <a class="nav-link" href="/pludg/objects">Objekte</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="references">Referenzen</a>
+                        <a class="nav-link" href="/pludg/history">Historie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="impressum">Impressum</a>
+                        <a class="nav-link" href="/pludg/news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact">Kontakt</a>
+                        <a class="nav-link" href="/pludg/contact">Kontakt</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="nav-extende-sep bg-dark w-100 d-block m-0" style="height: 10px; clear: both;"></div>
+</div>
     {% endblock %}
-    
-    <header id="m_header" class="bg-dark text-light text-center fixed-navbar-downpush content-header">
-        <div class="container">
-        {% block header %}
-            <h1>Lorem</h1>
-        {% endblock %}
+
+    {% block intro_window %}
+        <div class="intro" style="height: 400px;">
+            <!--<div class="intro-headline-backface"/>
+            <h1 class="intro-headline">Home</h1>-->
+            <img class="intro-image img-fluid" src="{% static 'pludg/images/pls_main.JPG' %}">
+            <div class="window" height="400px"></div>
         </div>
-    </header>
-    
-    <div id="main_content" class="container">
+    {% endblock %}
+
+    {% block site_intro %}
+    {% endblock %}
+
+    {% block site_nav %}
+    {% endblock %}
+
+
+    <div id="main_content">
     {% block main_content %}
-        <p>main content</p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut suscipit felis, sed lacinia nibh.
-            Nullam maximus et nisi et rhoncus. Quisque pharetra aliquet facilisis. Sed ante augue, dictum at feugiat
-            in, semper id quam. Suspendisse quis eleifend dui, vel facilisis nunc. Proin suscipit diam sit amet felis
-            aliquam, nec porttitor erat ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl
-            nisi, placerat ut arcu lacinia, rhoncus consectetur lorem. Donec laoreet rhoncus neque, sit amet bibendum
-            elit finibus at.
-            cass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ultricies
-            lorem pharetra erat pretium tempus. Vestibulum dolor lorem, sagittis vestibulum felis a, tincidunt
-            consectetur lacus. Praesent sem libero, consequat imperdiet dui eu, hendrerit pretium tellus. Cras et
-            pretium quam. Sed vel consequat urna. Sed rutrum turpis sit amet ultrices malesuada. Sed augue urna,
-            convallis at rutrum ut, vestibulum ut elit. Quisque vitae mi viverra, elementum ipsum vitae, porta quam.
-        </p>
-        <p>
-            Aenean faucibus luctus neque a maximus. Nullam fermentum sed nibh eu ultrices. Quisque facilisis massa
-            risus, eu mollis dui lacinia quis. Morbi vestibulum egestas nunc sit amet auctor.
-            Vestibulum sollicitudin, est ut dignissim ornare, nulla purus sollicitudin purus, et tincidunt nulla nisl
-            quis nunc. Integer ultrices felis vel convallis fringilla. Pellentesque habitant morbi tristique senectus
-            et netus et malesuada fames ac turpis egestas. Phasellus consequat eget neque ac euismod. Nulla ut pharetra
-            libero. Mauris vel aliquet lacus. Curabitur vitae fermentum enim. Nunc eleifend ligula quis metus rhoncus
-            mattis. Sed sed dapibus lacus. Curabitur feugiat metus in leo egestas, vel sollicitudin dolor feugiat.
-            Nunc viverra metus ut justo sagittis, non scelerisque risus dictum. Duis vulputate sed est vel egestas.
-            Cras blandit, velit a sagittis dapibus, diam magna interdum sem, non volutpat nisl nulla egestas libero.
-            Phasellus in convallis ante.
-        </p>
-        <p>
-            Cras mollis eros quis sem condimentum, in rutrum velit pulvinar. Sed vitae tincidunt eros. Cras commodo
-            mattis justo id porttitor. Ut pharetra, metus ut euismod iaculis, neque dui ultrices libero, nec interdum
-            sem lectus a tortor. Quisque vel fermentum lectus, eu commodo nisi. Ut nec molestie dolor. Curabitur
-            molestie rhoncus viverra. Nam ex mi, congue sit amet ligula ac, porttitor tempor purus. Curabitur commodo
-            placerat sodales.
-            Nulla facilisi. Maecenas hendrerit sem ut placerat finibus. Aliquam euismod tempus sagittis. Maecenas
-            non porta quam, euismod porta nunc. Praesent id auctor nisi. Mauris congue lobortis diam. Nulla volutpat
-            turpis a sem finibus, sit amet auctor eros vestibulum. Etiam nec tincidunt mi, sed tincidunt ante. Maecenas
-            suscipit ut enim vel facilisis. Nullam viverra at nibh id maximus.
-        </p>
-        <p>
-            Suspendisse vel est euismod, cursus felis in, volutpat arcu. In nec felis sed eros interdum euismod vitae
-            sit amet augue. Integer ac suscipit urna, nec varius velit. Nulla eget turpis gravida, sollicitudin libero
-            euismod, eleifend ligula. Praesent sagittis, lacus nec pharetra auctor, risus justo elementum orci, ac
-            fringilla dui dolor vitae eros. Suspendisse libero lacus, cursus eget accumsan in, commodo et eros. Duis
-            pretium semper tortor ut semper. Nulla finibus at nisl eu aliquam. Donec id metus at ante vestibulum
-            lobortis vel a nisi. Nunc tincidunt turpis orci, ac blandit lacus tempus ut. Phasellus venenatis blandit
-            erat vitae malesuada. Quisque accumsan est sit amet euismod condimentum. Nullam nec sagittis quam.
-            Suspendisse eget molestie dolor. Cras convallis, quam non dignissim scelerisque, dolor sem suscipit justo,
-            eu vestibulum mi odio dictum nisl. Proin varius vel quam sit amet venenatis. Fusce eget lacinia dui.
-            Vivamus magna dui, fringilla et erat ac, varius malesuada neque. Suspendisse potenti. Sed pharetra quis leo
-            non aliquam. Aliquam felis mauris, blandit et justo at, interdum laoreet ligula. Nunc maximus mauris et
-            diam accumsan fermentum. Pellentesque quis nisl turpis.
-        </p>
-        <p>
-            Vestibulum eu metus vitae nisl tincidunt tincidunt ut at nisl. Etiam feugiat dapibus ipsum a luctus. Fusce
-            euismod eu dui sed dictum. Vivamus malesuada mauris ut pellentesque placerat. Etiam venenatis vel leo sed
-            suscipit. Morbi a blandit lorem. Donec consequat lorem in ligula dignissim, ut faucibus lectus ornare.
-            Praesent molestie semper lacinia. Sed blandit viverra est, eget blandit urna scelerisque vel. Nullam
-            interdum eros in nisl consequat auctor. Aliquam tristique felis nec vehicula placerat. Integer id ligula
-            sit amet mauris eleifend eleifend a at erat. Etiam quis congue lorem, ut rutrum magna. Vestibulum ante
-            ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-            Pellentesque vitae felis tellus. Pellentesque tincidunt vitae leo sit amet pellentesque. Suspendisse
-            tristique, libero et accumsan auctor, ligula lacus semper enim, quis scelerisque tortor neque vitae metus.
-            Maecenas ullamcorper nisi eu euismod cursus. Curabitur sodales sem id facilisis suscipit. Etiam nec tellus
-            vitae velit tempus tempor a congue velit. Donec ut luctus est, at sollicitudin metus. Donec id accumsan
-            metus. Ut pulvinar, felis ut pellentesque imperdiet, erat massa bibendum quam, sed molestie ex ipsum quis
-            augue. Donec ac varius dolor. Nam consectetur pellentesque turpis in pretium. Mauris semper quam sapien,
-            et vulputate erat maximus nec. Pellentesque eget sagittis metus. Donec quis ornare libero.
-        </p>
-        <p>
-            Nullam luctus odio metus, ac eleifend eros pellentesque a. Pellentesque ultricies pellentesque lacus at
-            mattis. Nunc convallis, libero vel fringilla condimentum, orci turpis euismod ipsum, vel pellentesque arcu
-            lacus in sapien. Quisque eget massa sit amet sem ultricies tristique et nec lacus. Mauris blandit urna
-            vitae aliquet ornare. Ut pellentesque tempor lectus, sed dignissim orci iaculis ut. Pellentesque viverra
-            mattis turpis nec mollis. Suspendisse potenti. Integer dapibus porttitor venenatis. Maecenas sed dui ut
-            nunc molestie suscipit eu vitae nulla. Sed lacinia ut leo in venenatis. Duis sed commodo tellus, eu
-            elementum elit. Duis eleifend lectus purus, a venenatis enim mattis sed. Interdum et malesuada fames ac
-            ante ipsum primis in faucibus. Aenean fermentum imperdiet felis, mollis placerat ipsum tincidunt dapibus.
-            Aliquam porttitor felis nec magna vestibulum maximus. Nam malesuada est eget tortor rutrum rutrum. Nulla
-            et ex facilisis turpis auctor egestas et at felis. Nam congue purus at purus convallis aliquam. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor, enim ac convallis finibus, justo
-            massa convallis mi, eget facilisis libero urna gravida sem. Suspendisse quis quam sed lacus blandit
-            finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus.
-        </p>
-        <p>
-            Cras facilisis dignissim odio, quis dignissim arcu laoreet quis. In at sodales velit. Maecenas orci
-            lacus, pellentesque in odio vel, commodo placerat eros. Fusce lacinia at sapien vel bibendum. Donec in
-            mi orci. Quisque pulvinar accumsan accumsan. Donec feugiat convallis sem vitae pretium. Aliquam erat
-            volutpat. Duis dictum est non fermentum mollis. Nam scelerisque orci sit amet consectetur sagittis. Duis
-            nec vehicula risus. Ut at auctor libero, sit amet sodales magna. Ut pellentesque enim consectetur
-            suscipit porta.
-            Etiam libero metus, porttitor ornare libero venenatis, lacinia euismod augue. Fusce congue elit vel
-            eros suscipit mollis. Maecenas finibus arcu purus, non pharetra libero efficitur ut. Phasellus consectetur
-            aliquam quam ut bibendum. Nunc maximus odio eu viverra fringilla. In nec ligula eu metus molestie auctor.
-            Vivamus blandit massa in nunc ultricies tincidunt. Maecenas egestas velit in massa aliquam, sit amet
-            consequat arcu interdum. Donec dignissim nisi vitae nibh venenatis, id porta felis aliquam.
-        </p>
-        <p>
-            Maecenas bibendum arcu ante, sit amet condimentum lacus hendrerit gravida. Proin semper ante neque, non imperdiet
-            sapien iaculis sit amet. Curabitur convallis, lectus sed eleifend semper, magna lectus tempor metus, sit
-            amet egestas purus eros eget elit. Suspendisse pretium ac sem scelerisque dapibus.
-            Fusce vehicula elit et bibendum facilisis. Donec in nunc a nisl tempor faucibus sed a augue. Ut eget
-            quam at purus finibus aliquet. Praesent finibus ex ac mauris congue faucibus. Cras convallis elit vel
-            facilisis efficitur. Morbi vitae sem lacus. Vestibulum vitae posuere libero. Pellentesque pharetra, ligula
-            auctor dictum malesuada, dui eros vestibulum quam, quis consequat neque nunc vitae odio.
-        </p>
-        <p>
-            Nam aliquam magna at nibh finibus, vel suscipit neque venenatis. Mauris viverra elementum nibh ac
-            pellentesque. Donec sem enim, pellentesque sit amet mi sit amet, varius eleifend elit. Vivamus porttitor
-            arcu sed erat facilisis pellentesque. Cras faucibus vitae risus vel venenatis. Suspendisse imperdiet elit
-            quis ullamcorper hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-            cubilia Curae; Mauris ac pharetra turpis. Praesent vulputate venenatis lectus ut ullamcorper. Interdum et
-            malesuada fames ac ante ipsum primis in faucibus. Nam luctus ipsum in malesuada vehicula. Phasellus at
-            ullamcorper metus.Suspendisse egestas eros id massa scelerisque, eu mollis orci laoreet. Mauris
-            dignissim pharetra lacinia.
-        </p>
-        <p>
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum aliquam
-            leo a sapien fringilla, non aliquet massa euismod. Donec sit amet felis vitae nisl dictum porttitor sit
-            amet pharetra arcu. Praesent et metus ullamcorper mauris gravida imperdiet. Quisque quis dolor ligula.
-            Etiam porttitor, lorem nec venenatis lobortis, urna turpis feugiat ligula, luctus pretium mauris est et
-            risus. Nunc venenatis, tellus et porta ullamcorper, metus lacus convallis leo, sed porta ligula dui in
-            dolor. Donec fringilla nec neque auctor vestibulum. Cras venenatis ante eu tellus malesuada porta. Phasellus
-            ut est urna. Donec consectetur, libero nec finibus tempor, nisl mi rhoncus lacus, id blandit purus magna
-            faucibus arcu. Nulla tempus varius dolor, non consectetur quam cursus a. Cras eget congue est, id ultrices
-            justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla magna a elit maximus, quis
-            lacinia est ornare.
-        </p>
+        <iframe src="." style="width: 100%; height: 800px;"></iframe>
     {% endblock %}
     </div>
-    
+
+
     {% block footer %}
-    <footer id="m_footer" class="bg-dark">
+    <footer id="m_footer" class="bg-dark pludg-footer">
         <div class="container">
-            <address>
-                <b>Pludg Inc</b><br>
-                <br>
+            <div class="row justify-content-center">
+                <address class="col-sm">
+                    <b>Pludg Inc</b><br>
+                    <br>
                     Pludg Inc. and Partner <br>
                     Prinz Ludwig Straße 0 <br>
                     93319 Regensburg <br>
-                <br>
+                </address>
+                <address class="col-sm">
                     Tel: 0834/839483 <br>
-                    Fax: 0834/839420
-            </address>
+                    Fax: 0834/839420<br>
+                    <span><a href="impressum">Impressum</a></span>
+                </address>
+            </div>
         </div>
     </footer>
     {% endblock %}
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <!-- Core JS file -->
+    <script src="{% static 'pludg/node_modules/photoswipe/dist/photoswipe.min.js' %}"></script>
+    <!-- UI JS file -->
+    <script src="{% static 'pludg/node_modules/photoswipe/dist/photoswipe-ui-default.min.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
     
+
 </body>
 </html>

@@ -1,0 +1,9 @@
+/* header rework */
+/* line 2, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/projects.scss */
+.intro {
+  background-image: url("../images/arch_plan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+/*# sourceMappingURL=projects.css.map */

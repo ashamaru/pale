@@ -1,0 +1,42 @@
+//$light-grey: #f2f2f2;
+$light-grey: white;
+$light-darker: #333440;
+// $light-darker: #eeeff0;  old value
+
+.about {
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 1.2rem;
+
+    background-color: $light-darker;
+    
+    hr {
+        margin: 5px 0px;
+        border-color: #cba;
+    }
+    
+}
+
+.about-container {
+    padding-bottom: 16px;
+    z-index: 10;
+}
+
+.about-headline-container {
+    display: block;
+    margin-top: -3.4rem;
+    padding: 0.2rem;
+    padding-left: 1.25rem;
+}
+
+.about-headline {
+    // color: #225;
+    font-size: 2rem;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    margin-bottom: 0px;
+}

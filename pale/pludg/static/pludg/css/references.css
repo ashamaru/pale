@@ -1,0 +1,129 @@
+/*
+ * Window
+ * - showing the background
+ * - restructuring: set the width manually in html
+ */
+.window {
+  visibility: hidden;
+  width: 100%;
+  height: 400px; }
+
+/*
+ * Intro
+ * - introduces the page content
+ */
+.intro {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  margin-top: -2px;
+  padding: 0px; }
+
+.intro-headline-backface {
+  background-color: white;
+  position: relative;
+  height: 4rem;
+  opacity: 0.5;
+  margin: 0px;
+  padding: 0.2rem 0rem 0.1rem 0rem; }
+
+.intro-headline {
+  color: #555;
+  opacity: 1.0; }
+
+.intro-infos {
+  color: white;
+  opacity: 0.8; }
+
+.intro-image {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  z-index: -1; }
+
+.about {
+  display: block;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 1.2rem;
+  background-color: #333440; }
+  .about hr {
+    margin: 5px 0px;
+    border-color: #cba; }
+
+.about-container {
+  padding-bottom: 16px;
+  z-index: 10; }
+
+.about-headline-container {
+  display: block;
+  margin-top: -3.4rem;
+  padding: 0.2rem;
+  padding-left: 1.25rem; }
+
+.about-headline {
+  font-size: 2rem; }
+
+.about-description {
+  font-size: 1.1rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  margin-bottom: 0px; }
+
+.references-wrapper {
+  margin: 0px 0px 0px 15px; }
+
+.reference-category {
+  margin: 0; }
+
+.reference {
+  display: block;
+  float: left;
+  box-shadow: 1px 1px 4px 0px #e2e2e2;
+  margin: 0 15px 15px 0;
+  padding: 0;
+  max-width: 265px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  color: #373737; }
+  .reference div {
+    /*
+    border-style: solid;
+    border-color: indigo;
+    border-width: 1px;
+    border-radius: 5px;
+    */ }
+
+/*
+.reference:nth-child(even) {
+    // background-color: darkgray;
+    
+    .reference-image {
+        order: 2;
+    }
+    
+    .reference-content {
+        order: 1;
+    }
+}
+*/
+.reference-image {
+  display: block;
+  padding: 0;
+  margin: 0; }
+  .reference-image img {
+    width: 265px;
+    height: 200px; }
+
+.reference-content {
+  display: block;
+  margin: 0;
+  padding: 0.5rem;
+  height: 160px; }
+  .reference-content h2 {
+    font-size: 1.5rem; }
+  .reference-content * {
+    font-size: 0.9rem; }
+  .reference-content p {
+    padding: 0px; }
+
+/*# sourceMappingURL=references.css.map */

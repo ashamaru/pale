@@ -1,0 +1,12 @@
+/*
+ * Window
+ * - showing the background
+ * - restructuring: set the width manually in html
+ */
+/* line 9, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/_window.scss */
+.window {
+  visibility: hidden;
+  width: 100%;
+  height: 400px; }
+
+/*# sourceMappingURL=_window.css.map */

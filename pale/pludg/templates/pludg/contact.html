@@ -1,0 +1,143 @@
+{% extends 'pludg/base_template.html' %}
+
+{% load static %}
+
+{% block stylessheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'pludg/css/contact.css' %}" />
+{% endblock %}
+
+
+{% block site_intro %}
+<div id="about_wrapper" class="about">
+    <div class="container about-container bg-light">
+        <div class="about-headline-container">
+            <h2 class="about-headline font-pale">
+                Kontakt und Anfahrt
+            </h2>
+            <hr>
+        </div>
+        <p class="about-description">
+             Wir haben ihr Interesse geweckt?
+            Kontaktieren sie uns einach über Mail. Wir nehmen ihre Anfragen gerne entgegen
+            und kontaktieren sie in kürze.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block main_content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm m-3">
+            <h2 style="text-align: center;">
+                Kontaktieren sie uns
+            </h2>
+            <hr>
+        </div>
+    </div>
+    <div id="contact_wrapper" class="row">
+        <div class="col-sm-4 p-4 contact-info">
+            <h3>Kontaktformular</h3>
+            <p>
+                Kontaktieren sie uns bezüglich Anfragen an Miteflächen,
+                bezüglich diversen und so weiter da muss später noch was
+                stehen.
+            </p>
+            <address>
+                Hier steht ein Addressfeld.
+            </address>
+        </div>
+        <div class="col-sm form-wrapper">
+            <form action="./contact/" method="post" class="row">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+                <div class="field-wrapper label-textfield-pair col-sm">
+                    {{ form.sender.errors }}
+                    <label for="{{ form.name.id_for_label }}">Nachname:</label>
+                    {{ form.name }}
+                </div>
+                <div class="field-wrapper label-textfield-pair  col-sm">
+                    {{ form.sender.errors }}
+                    <label for="{{ form.first_name.id_for_label }}">Vorname:</label>
+                    {{ form.first_name }}
+                </div>
+                <div class="w-100"></div>
+                <div class="field-wrapper label-textfield-pair col-sm">
+                    {{ form.sender.errors }}
+                    <label for="{{ form.country.id_for_label }}">Land:</label>
+                    {{ form.country }}
+                </div>
+                <div class="field-wrapper label-textfield-pair col-sm">
+                    {{ form.sender.errors }}
+                    <label for="{{ form.plz_city.id_for_label }}">PLZ / Stadt:</label>
+                    {{ form.plz_city }}
+                </div>
+                <div class="w-100"></div>
+                <div class="field-wrapper label-textfield-pair col-sm">
+                    {{ form.sender.errors }}
+                    <label for="{{ form.street.id_for_label }}">Straße:</label>
+                    {{ form.street }}
+                </div>
+                <div class="field-wrapper label-textfield-pair col-sm">
+                    {{ form.sender.errors }}
+                    <label for="{{ form.phone.id_for_label }}">Telefonnummer:</label>
+                    {{ form.phone }}
+                </div>
+                <div class="w-100"></div>
+                <div class="field-wrapper label-textfield-pair col-sm">
+                    {{ form.sender.errors }}
+                    <label for="{{ form.sender.id_for_label }}">Your email address:</label>
+                    {{ form.sender }}
+                </div>
+                <div class="field-wrapper label-textfield-pair col-sm">
+                </div>
+                <div class="w-100"></div>
+                <div class="field-wrapper label-textfield-pair col-sm">
+                    {{ form.subject.errors }}
+                    <label for="{{ form.subject.id_for_label }}">Betreff:</label>
+                    {{ form.subject }}
+                </div>
+                <div class="w-100"></div>
+                <div class="field-wrapper col-sm">
+                    {{ form.message.errors }}
+                    <label for="{{ form.message.id_for_label }}">Your message:</label>
+                    {{ form.message }}
+                </div>
+                <div class="w-100"></div>
+                <div class="field-wrapper col-sm">
+                    {{ form.cc_myself.errors }}
+                    <label for="{{ form.cc_myself.id_for_label }}">Kopie an eigene Mail</label>
+                    {{ form.cc_myself }}
+                </div>
+                <div class="w-100"></div>
+                <div class="field-wrapper col-sm">
+                    <div class="button-wrapper">
+                        <input type="submit" value="Absenden" style="float: right;" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm m-3">
+            <h2 style="text-align: center;">
+                Anfahrt
+            </h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm" style="width: 800px; margin: 5px auto;">
+            <iframe style="width: 100%;"
+                height="650"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiG9N0p1OBQmOItVphxOTpNt3vNa4HgJM
+                &q=Prinz Ludwig Straße,Regensburg" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}

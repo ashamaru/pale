@@ -1,0 +1,73 @@
+{% extends 'pludg/base_template.html' %}
+
+
+{% block stylessheets %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pludg/css/project.css' %}" />
+{% endblock %}
+
+
+{% block site_intro %}
+<div id="about_wrapper" class="about">
+    <div class="container about-container bg-light">
+        <div class="about-headline-container">
+            <h2 class="about-headline font-pale">
+                Projekt Name
+            </h2>
+            <hr>
+        </div>
+        <p class="about-description">
+            Hier steht was über die Referenz.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block main_content %}
+<div class="container">
+    <div class="row project">
+        <div class="col-sm">
+            <ul role="images-list">
+                <li>
+                    <img src="..." alt="Projekt Bild">
+                </li>
+                <li>
+                    <img src="..." alt="Projekt Bild">
+                </li>
+                <li>
+                    <img src="..." alt="Projekt Bild">
+                </li>
+            </ul>
+            <div class="project-details">
+                <h2>
+                    Name des Projekts
+                </h2>
+                <p>
+                    Beschreibung der Referenz als langer ausführender
+                    erläuternder den Sachverhalt angemessen schildernder
+                    mit Bedacht gewählter aber einfach und direkter
+                    von Professionalität und Kompetenz überzeugender
+                    Text :[] .
+                </p>
+            </div>
+            <div class="project-info-overview">
+                <ul>
+                    <li>
+                        20.000 m•m Mietfläche
+                    </li>
+                    <li>
+                        40 seperate Blocks
+                    </li>
+                    <li>
+                        Notfall Kernreaktor für Krisensituationen
+                    </li>
+                    <li>
+                        Donutladen die Straße gegenüber
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

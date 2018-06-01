@@ -1,0 +1,111 @@
+@import "window";
+@import "intro";
+@import "about";
+
+
+$bg-color: #f2f2f2;
+$fg-color: #373737;
+$border-color: #e2e2e2;
+$boxshadow-color: #e2e2e2;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+
+.references-wrapper {
+    margin: 0px 0px 0px 15px;
+}
+
+.reference-category {
+    margin: 0;
+}
+
+.reference {
+    // display
+    display: block;
+    float: left;
+    
+    // border & boxshadow
+    
+    box-shadow: 1px 1px 4px 0px $boxshadow-color;
+    
+    margin: 0 15px 15px 0;
+    padding: 0;
+    
+    max-width: 265px;
+    overflow: hidden;
+    
+    div {
+        /*
+        border-style: solid;
+        border-color: indigo;
+        border-width: 1px;
+        border-radius: 5px;
+        */
+    }
+    
+    // colors
+    background-color: $bg-color;
+    color: $fg-color;
+}
+
+// alternating rows
+/*
+.reference:nth-child(even) {
+    // background-color: darkgray;
+    
+    .reference-image {
+        order: 2;
+    }
+    
+    .reference-content {
+        order: 1;
+    }
+}
+*/
+
+.reference:nth-child(1) {
+   // background-color: slategray;
+}
+
+.reference-image {
+    display: block;
+    padding: 0;
+    margin: 0;
+    
+    img {
+        width: 265px;
+        height: 200px;
+    }
+}
+
+.reference-content {
+    display: block;
+    margin: 0;
+    padding: 0.5rem;
+    height: 160px;
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    * {
+        font-size: 0.9rem;
+    }
+    
+    p {
+        padding: 0px;
+    }
+}

@@ -1,0 +1,32 @@
+/* line 4, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/_news-mod.scss */
+.news ul {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0rem;
+  overflow: hidden; }
+  /* line 10, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/_news-mod.scss */
+  .news ul li {
+    display: block;
+    padding: 0.5rem; }
+    /* line 14, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/_news-mod.scss */
+    .news ul li h1, .news ul li h2, .news ul li h3, .news ul li h4 {
+      display: inline-block; }
+    /* line 18, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/_news-mod.scss */
+    .news ul li span {
+      float: right; }
+
+/* line 5, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/home.scss */
+.reference {
+  overflow: hidden;
+  height: 100%; }
+  /* line 10, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/home.scss */
+  .reference p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    max-width: 300px; }
+  /* line 17, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/home.scss */
+  .reference a {
+    color: grey; }
+
+/*# sourceMappingURL=home.css.map */

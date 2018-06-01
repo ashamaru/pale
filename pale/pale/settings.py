@@ -80,7 +80,7 @@ ROOT_URLCONF = 'pale.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,11 +101,26 @@ WSGI_APPLICATION = 'pale.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dbpale',
+        'USER': 'katsumoto',
+        'PASSWORD': 'th00rinZn',
+        # for pythonanywhere.com
+        # 'HOST': 'katsumoto.mysql.pythonanywhere-services.com',
+        # for local development
+        'HOST': 'localhost',
     }
 }
 
+# Email
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.web.de'
+DEFAULT_FROM_EMAIL = 'tomh2d@web.de'
+EMAIL_HOST_USER = 'tomh2d@web.de'
+EMAIL_HOST_PASSWORD = 'glassh2ouseInc'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = 'True'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -140,7 +155,14 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Media Files
+
+MEDIA_ROOT = '~/PycharmProjects/pale/media/'
+MEDIA_URL = '/media/'
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATIC_ROOT = 'path/to/static/'
 STATIC_URL = '/static/'

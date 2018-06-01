@@ -1,0 +1,51 @@
+/* line 5, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+.contact-info {
+  padding: 1.25rem;
+  margin: 0.1rem;
+  border-radius: 0;
+  background-color: #e9ecef;
+  color: #343a40; }
+
+/* line 14, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+form {
+  padding: 1.25rem;
+  border-radius: 0;
+  background-color: #e9ecef;
+  color: #343a40; }
+
+/* line 23, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+.label-textfield-pair label {
+  display: block; }
+
+/* line 27, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+.label-textfield-pair input, .label-textfield-pair textarea {
+  display: block;
+  width: 100%; }
+
+/* line 35, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+.field-wrapper input, .field-wrapper textarea {
+  padding: 0.4rem;
+  background-color: #f8f9fa; }
+
+/* line 40, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+.field-wrapper input {
+  padding: 0.1rem 0.4rem;
+  border: none; }
+
+/* line 45, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+.field-wrapper textarea {
+  border: none;
+  width: 100%; }
+
+/* line 54, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+.form-wrapper * {
+  margin: 0.1rem; }
+
+/* line 58, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/contact.scss */
+.form-wrapper input[type="submit"] {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-radius: 0;
+  border: none; }
+
+/*# sourceMappingURL=contact.css.map */

@@ -14,15 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from django.conf.urls import url
+from django.conf.urls import url, re_path
 from django.contrib import admin
 
 from . import views
 
 urlpatterns = [
-    url(r'projects', views.PludgImpressumView.as_view()),
-    url(r'references', views.PludgImpressumView.as_view()),
-    url(r'impressum$', views.PludgImpressumView.as_view()),
-    url(r'contact', views.PludgImpressumView.as_view()),
+    #url(r'projects/$', views.PludgProjectsView.as_view()),
+    url(r'objects/$', views.PludgObjectsView.as_view()),
+    re_path(r'object/(?P<objk>[0-9]+)/', views.PludgObjectView.as_view()),
+    url(r'history/$', views.PludgHistoryView.as_view()),
+    url(r'news/$', views.PludgNewsView.as_view()),
+    url(r'news/article/$', views.PludgNewsArticleView.as_view()),
+    url(r'impressum/$', views.PludgImpressumView.as_view()),
+    url(r'contact/$', views.PludgContactView.as_view()),
     url(r'^$', views.PludgHomeView.as_view()),
 ]

@@ -1,0 +1,37 @@
+/* line 3, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/object.scss */
+ul {
+  list-style: none; }
+  /* line 7, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/object.scss */
+  ul li {
+    display: inline; }
+  /* line 11, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/object.scss */
+  ul img {
+    width: 200px;
+    height: auto; }
+
+/* line 18, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/object.scss */
+.my-gallery figure {
+  display: inline-block;
+  float: left;
+  margin: 0 1rem 0 1rem; }
+
+/* line 24, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/object.scss */
+.my-gallery img {
+  display: inline;
+  width: 200px;
+  height: auto; }
+
+/* line 30, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/object.scss */
+.my-gallery figcaption {
+  text-align: center; }
+
+/* line 35, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/object.scss */
+.reference-location {
+  color: darkgrey;
+  font-size: 0.8rem; }
+
+/* line 40, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/object.scss */
+.reference-info-overview {
+  background-color: #e9ecef; }
+
+/*# sourceMappingURL=object.css.map */

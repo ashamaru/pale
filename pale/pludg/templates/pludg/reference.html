@@ -1,0 +1,165 @@
+{% extends 'pludg/base_template.html' %}
+
+{% load static %}
+
+{% block preloads %}
+<link rel="preload" as="image" href="{% get_media_prefix %}{{ images.main.image }}"> <!--media="(max-width: 600px)"-->
+{% endblock %}
+
+{% block stylessheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'pludg/css/object.css' %}" />
+{% endblock %}
+
+{% block intro_window %}
+    <div class="intro" style="height: 400px;">
+        <img class="intro-image img-fluid" src="{% get_media_prefix %}{{ images.main.image }}">
+        <div class="window" height="400px"></div>
+    </div>
+{% endblock %}
+
+{% block site_intro %}
+<div id="about_wrapper" class="about">
+    <div class="container about-container bg-light">
+        <div class="about-headline-container">
+            <h2 class="about-headline font-pale">
+                {{ reference.name }}
+            </h2>
+            <hr>
+        </div>
+        <p class="reference-location">{{ reference.location }}</p>
+        <p class="about-description">
+            Einführender Zweizeiler zum Objekt.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block main_content %}
+<div class="container">
+    <div class="map-elem-wrapper row my-5">
+        <div class="col-sm">
+            <div class="map bg-dark m-0 p-0" style="height: 400px;">
+                <img src="{% get_media_prefix %}{{ images.map.image }}" style="width: auto; height: 400px;">
+            </div>
+        </div>
+            <div class="col-sm-4 reference-info-overview">
+                 <div>
+                    {{ reference.info_overview|safe }}
+                </div>
+                <div class="m-5">
+                    Verfügbarkeit von mietflächen disclaimer.
+                </div>
+            </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-sm">
+            <div class="reference-details">
+                <p>
+                    {% comment %}
+                    <!--
+                    Beschreibung der Referenz als langer ausführender
+                    erläuternder den Sachverhalt angemessen schildernder
+                    mit Bedacht gewählter aber einfach und direkter
+                    von Professionalität und Kompetenz überzeugender
+                    Text :[] .
+                    -->
+                    {% endcomment %}
+                    {{ reference.description }}
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="row my-5">
+        <div class="col-sm">
+            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                {% for image in images.gallery %}
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="{% get_media_prefix %}{{ image.image }}" itemprop="contentUrl" data-size="600x400">
+                        <img src="{% get_media_prefix %}{{ image.image }}" itemprop="thumbnail" alt="Image description" />
+                    </a>
+                    <figcaption itemprop="caption description">{{ image.name }}</figcaption>
+                </figure>
+                {% empty %}
+                <div class="bg-light font-pale p-4">
+                    Es sind keine Bilder zur Vorschau vorhanden.
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+            It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static 'pludg/jscript/references.js' %}"></script>
+<script src="{% static 'pludg/jscript/reference.js' %}"></script>
+{% endblock %}

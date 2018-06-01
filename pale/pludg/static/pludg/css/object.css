@@ -1,0 +1,27 @@
+ul {
+  list-style: none; }
+  ul li {
+    display: inline; }
+  ul img {
+    width: 200px;
+    height: auto; }
+
+.my-gallery figure {
+  display: inline-block;
+  float: left;
+  margin: 0 1rem 0 1rem; }
+.my-gallery img {
+  display: inline;
+  width: 200px;
+  height: auto; }
+.my-gallery figcaption {
+  text-align: center; }
+
+.reference-location {
+  color: darkgrey;
+  font-size: 0.8rem; }
+
+.reference-info-overview {
+  background-color: #e9ecef; }
+
+/*# sourceMappingURL=object.css.map */

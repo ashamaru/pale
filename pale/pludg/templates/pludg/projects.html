@@ -1,0 +1,64 @@
+{% extends 'pludg/base_template.html' %}
+
+
+{% block stylessheets %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pludg/css/projects.css' %}" />
+{% endblock %}
+
+
+{% block header %}
+    <div class="intro" style="height: 400px;">
+        <!--<div class="intro-headline-backface"/>
+        <h1 class="intro-headline">Home</h1>-->
+    <div class="window" height="400px"></div>
+    </div>
+{% endblock %}
+
+
+{% block site_intro %}
+<div id="about_wrapper" class="about">
+    <div class="container about-container bg-light">
+        <div class="about-headline-container">
+            <h2 class="about-headline font-pale">
+                Projekte
+            </h2>
+            <hr>
+        </div>
+        <p class="about-description">
+            Wir schreiben hier was über unser Projekte. Diese Seite beinhaltet eine statische Karten Navigation
+            zu den einzelnen Projekt Pages. Einbindung von Javscript uns selbstimplementierter Karten Navigation
+            sind geplant.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block main_content %}
+<div id="projects" class="container my-3">
+   <!--
+    <div class="row">
+        <div class="col-sm m-3">
+            <h2 style="text-align: center;">
+                Projekte
+            </h2>
+            <hr>
+        </div>
+    </div>
+    -->
+    <div id="projects_row" class="row">
+        <div class="col-sm bg-light-darker p-0" style="height: 600px;">
+            <canvas id="map_nav_canvas" width="1200" height="600" style="height: 600px; width: 100%;">
+
+            </canvas>
+        </div>
+    </div>
+</div>
+
+{% block scripts %}
+{% load static %}
+<script src="{% static 'pludg/jscript/map_nav.js' %}"></script>
+{% endblock %}
+
+{% endblock %}

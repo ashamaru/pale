@@ -1,0 +1,183 @@
+
+/*
+ * pludg base_styles
+ * 2017/12/15
+ *
+ */
+
+@import "base";
+
+@import "window";
+@import "intro";
+@import "about";
+@import "site-nav";
+@import "base-animations";
+
+
+//$light-darker: #f8f9fa;
+$light-darker: #eeeff0;
+
+// temporary
+.intro {
+    /* background-image: url("../images/pls_main.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+
+h1, h2, h3, h4 {
+    animation: 3s 1 alternate fadeIn;
+}
+
+// temporary end
+
+/* fixed navbar anchor jump correction class 
+ * -- todo
+ * -- add media query for responivness
+*/
+.ref-anch {
+    margin-top: -57px;
+    padding-top: 57px;
+}
+
+
+header {
+    p {
+        margin-bottom: 0;
+    }
+}
+
+address {
+    font-size: 0.8rem;
+}
+
+/*
+ *  class to compensate the fixed positioned navbar
+ *  the 43px were tested
+ *  todo: evaluate the criteria which define the navbars container size
+ *  -> navbar padding was the biatch
+ */
+.fixed-navbar-downpush {
+    margin-top: 43px;
+}
+
+@media screen and (min-width: 767px) {
+    .fixed-navbar-downpush {
+    margin-top: 59px;
+    }
+}
+
+.navbar {
+    padding: 0.1rem 0.4rem;
+}
+
+
+@media screen and (max-width: 767px) {
+    .navbar-details {
+    display: none;
+    }
+}
+
+.navbar-sticky {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+
+.navbar-details {
+    margin: 0px;
+    margin-right: 1rem;
+    width: 100%;
+    padding: 1rem 1rem 0rem 1rem;
+    
+    color: #456;
+    font-size: 1rem;
+    
+    background-image: url('../images/pl_footer_alpha.png');
+    background-size: auto 80%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+/*
+ *  Coloring classes
+ */
+
+/* backgrounds */
+.bg-primary {
+  background-color: indigo !important;
+}
+
+a.bg-primary:focus, a.bg-primary:hover {
+  background-color: #0062cc !important;
+}
+
+.bg-secondary {
+  background-color: #868e96 !important;
+}
+
+a.bg-secondary:focus, a.bg-secondary:hover {
+  background-color: #6c757d !important;
+}
+
+.bg-pale {
+    background-color: #900040 !important;
+}
+
+.bg-pludg-dark {
+    
+}
+
+.bg-light-darker {
+    background-color: $light-darker;
+}
+
+.bg-pludg-light {
+    background-color: $pludg_light_bg;
+}
+
+
+/* text colors */
+.font-pludg-dark {
+    color: $pludg_col_dark_font;
+}
+
+.font-pale {
+    color: #900040;
+}
+
+
+
+
+/* random */
+
+.icon-wrapper {
+    display: inline-block;
+    padding: 0px;
+}
+
+
+/* site footer styles */
+
+#m_footer {
+    color: white;
+    padding: 20px 20px 5px 20px;
+    clear: both;
+}
+
+.pludg-footer {
+    background-image: url('../images/pl_footer_alpha.png');
+    background-size: auto 80%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+    .pludg-footer {
+    background-size: auto 50%;
+    }
+}
+
+.container {
+    // max-width: 90vw;
+}

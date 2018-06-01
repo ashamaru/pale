@@ -1,0 +1,48 @@
+{% extends 'pludg/base_template.html' %}
+
+{% block stylessheets %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pludg/css/news.css' %}" />
+{% endblock %}
+
+{% block header %}
+    <div class="intro" style="height: 400px;">
+        <!--<div class="intro-headline-backface"/>
+        <h1 class="intro-headline">Home</h1>-->
+    <div class="window" height="400px"></div>
+    </div>
+{% endblock %}
+
+
+{% block site_intro %}
+<div id="about_wrapper" class="about">
+    <div class="container about-container bg-light">
+        <div class="about-headline-container">
+            <h2 class="about-headline font-pale">
+                Historie
+            </h2>
+            <hr>
+        </div>
+        <p class="about-description">
+             Unser Werdegang
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block main_content %}
+
+<div class="container">
+   <div id="history" class="row ref-anch">
+        <div class="col-sm m-3">
+            <h2 style="text-align: center;">
+                Historie
+            </h2>
+            <hr>
+        </div>
+    </div>
+    <div id="history_wrapper" class="row">
+    </div>
+</div>
+{% endblock %}

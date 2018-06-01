@@ -1,0 +1,148 @@
+/*
+ * pludg base_styles
+ * 2017/12/15
+ *
+ */
+/* line 15, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+header {
+  background-image: url("../images/engineering-pictures-plan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+@media screen and (max-width: 767px) {
+  /* line 23, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+  .navbar-details {
+    display: none; } }
+
+/* line 28, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.navbar-details {
+  margin: 0px;
+  padding: 1rem 1rem 0rem 1rem; }
+
+/* line 33, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+address {
+  font-size: 0.8rem; }
+
+/*
+ *  class to compensate the fixed positioned navbar
+ *  the 43px were tested
+ *  todo: evaluate the criteria which define the navbars container size
+ *  -> navbar padding was the biatch
+ */
+/* line 43, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.fixed-navbar-downpush {
+  margin-top: 43px; }
+
+@media screen and (min-width: 767px) {
+  /* line 48, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+  .fixed-navbar-downpush {
+    margin-top: 83px; } }
+
+/* line 53, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.navbar {
+  padding: 0.1rem 0.4rem; }
+
+/*
+ *  Coloring classes
+ */
+/* backgrounds */
+/* line 63, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.bg-primary {
+  background-color: indigo !important; }
+
+/* line 67, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+a.bg-primary:focus, a.bg-primary:hover {
+  background-color: #0062cc !important; }
+
+/* line 71, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.bg-secondary {
+  background-color: #868e96 !important; }
+
+/* line 75, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+a.bg-secondary:focus, a.bg-secondary:hover {
+  background-color: #6c757d !important; }
+
+/* line 79, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.bg-pale {
+  background-color: #900040 !important; }
+
+/* line 87, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.bg-light-darker {
+  background-color: #eeeff0; }
+
+/* line 91, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.bg-pludg-light {
+  background-color: #f3f3f3; }
+
+/* text colors */
+/* line 97, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.font-pludg-dark {
+  color: #663a51; }
+
+/* line 101, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.font-pale {
+  color: #900040; }
+
+/* line 109, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.icon-wrapper {
+  display: inline-block;
+  padding: 0px; }
+
+/* navigation styles */
+/*
+#navigation_wrapper {
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0px;
+    display: block;
+}
+
+#nav_bar {
+    list-style: none;
+}
+
+#nav_bar > li {
+    display: inline-block;
+    padding: 0px 5px 0px 5px;
+}
+
+#nav_bar a {
+    color: white;
+}
+*/
+/* main content styles */
+/* line 139, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+#m_content {
+  /*
+    width: 1000px;
+    margin: auto;
+    */ }
+
+/* line 146, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.main-content-container {
+  max-width: 1000px; }
+
+/* site footer styles */
+/* line 153, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+#m_footer {
+  color: white;
+  padding: 20px 20px 5px 20px;
+  clear: both; }
+
+/* line 159, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+.pludg-footer {
+  background-image: url("../images/pl_footer_alpha.png");
+  background-size: auto 80%;
+  background-position: bottom right;
+  background-repeat: no-repeat; }
+
+@media screen and (max-width: 767px) {
+  /* line 167, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+  .pludg-footer {
+    background-size: auto 50%; } }
+
+/* line 177, /Users/tak7tsuki/PycharmProjects/pale/pale/pludg/static/pludg/sass/basestyles.scss */
+#mfooter a {
+  background-color: aqua; }
+
+/*# sourceMappingURL=basestyles.css.map */

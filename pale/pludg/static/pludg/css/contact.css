@@ -1,0 +1,38 @@
+.contact-info {
+  padding: 1.25rem;
+  margin: 0.1rem;
+  border-radius: 0;
+  background-color: #e9ecef;
+  color: #343a40; }
+
+form {
+  padding: 1.25rem;
+  border-radius: 0;
+  background-color: #e9ecef;
+  color: #343a40; }
+
+.label-textfield-pair label {
+  display: block; }
+.label-textfield-pair input, .label-textfield-pair textarea {
+  display: block;
+  width: 100%; }
+
+.field-wrapper input, .field-wrapper textarea {
+  padding: 0.4rem;
+  background-color: #f8f9fa; }
+.field-wrapper input {
+  padding: 0.1rem 0.4rem;
+  border: none; }
+.field-wrapper textarea {
+  border: none;
+  width: 100%; }
+
+.form-wrapper * {
+  margin: 0.1rem; }
+.form-wrapper input[type="submit"] {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-radius: 0;
+  border: none; }
+
+/*# sourceMappingURL=contact.css.map */

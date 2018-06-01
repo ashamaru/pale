@@ -1,0 +1,42 @@
+@import "colors_bstrap";
+
+ul {
+    
+    list-style: none;
+    
+    li {
+        display: inline;
+    }
+    
+    img {
+        width: 200px;
+        height: auto;
+    }
+}
+
+.my-gallery {
+    figure {
+        display: inline-block;
+        float: left;
+        margin: 0 1rem 0 1rem;
+    }
+    
+    img {
+        display: inline;
+        width: 200px;
+        height: auto;
+    }
+    
+    figcaption {
+        text-align: center;
+    }
+}
+
+.reference-location {
+    color: darkgrey;
+    font-size: 0.8rem;
+}
+
+.reference-info-overview {
+    background-color: $gray-200;
+}
